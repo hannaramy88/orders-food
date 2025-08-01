@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>نظام الطلبات</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAVE RESTAURANT - نظام إدارة الطلبات</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
-  <div class="sidebar">
-    <h2>القائمة</h2>
-    <button onclick="showAddItem()">➕ إضافة صنف</button>
-    <button onclick="showOrders()">📋 قائمة الطلبات</button>
-    <button onclick="generateCustomerLink()">📨 توليد رابط للزباين</button>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>CAVE RESTAURANT</h2>
+      <h3>نظام الطلبات</h3>
+      <button onclick="showAddItemForm()">➕ إضافة صنف جديد</button>
+      <button onclick="showOrderInterface()">📋 قائمة الطلبات</button>
+    </aside>
+    <main class="main-content" id="main-content">
+      <h1>مرحباً بك في CAVE RESTAURANT 👋</h1>
+      <p>اختر من القائمة الجانبية لبدء العمل</p>
+    </main>
   </div>
-
-  <div class="main">
-    <div id="add-item" class="section">
-      <h3>إضافة صنف جديد</h3>
-      <input type="text" id="item-name" placeholder="اسم الصنف">
-      <input type="number" id="item-price" placeholder="السعر (ل.ل)">
-      <input type="text" id="item-options" placeholder="الخصائص (مفصولة بفاصلة)">
-      <button onclick="addItem()">إضافة الصنف</button>
-    </div>
-
-    <div id="order-section" class="section" style="display:none;">
-      <h3>قائمة الطلبات</h3>
-      <input type="text" placeholder="ابحث عن صنف..." oninput="searchItems(this.value)">
-      <div id="items-list"></div>
-      <div id="selected-items"></div>
-      <div id="total"></div>
-      <button onclick="prepareOrder()">📦 تحضير الطلبية</button>
-      <button onclick="printOrder()">🖨️ طباعة</button>
-      <div id="link-section" style="margin-top: 10px;"></div>
-    </div>
-  </div>
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="script.js"></script>
 </body>
 </html>
